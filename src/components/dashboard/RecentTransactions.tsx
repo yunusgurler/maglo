@@ -55,7 +55,6 @@ export const RecentTransactions: React.FC<{
       <ul className="lg:hidden divide-y divide-slate-100">
         {list.map((t) => {
           const iso = currency || t.currency || "USD";
-          const isNeg = t.amount < 0;
           const absAmt = Math.abs(t.amount);
 
           return (
@@ -102,7 +101,6 @@ export const RecentTransactions: React.FC<{
         <tbody>
           {list.map((t) => {
             const iso = currency || t.currency || "USD";
-            const isNeg = t.amount < 0;
             const absAmt = Math.abs(t.amount);
 
             return (

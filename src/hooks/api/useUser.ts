@@ -6,14 +6,16 @@ export const useLogin = () =>
   useMutation({
     mutationFn: async (payload: { email: string; password: string }) => {
       const { data } = await api.post("/users/login", payload);
-      return data as { accessToken: string; refreshToken: string };
+      console.log("data", data);
+
+      return data as { data: { accessToken: string; refreshToken: string } };
     },
   });
 
 export const useRegister = () =>
   useMutation({
     mutationFn: async (payload: {
-      name: string;
+      fullName: string;
       email: string;
       password: string;
     }) => {

@@ -38,7 +38,7 @@ export default function Dashboard() {
 
         <main className="flex flex-col gap-6 bg-white lg:bg-white rounded-2xl lg:rounded-none">
           <div className="lg:hidden bg-white rounded-2xl shadow-card">
-            <Topbar name={me?.data?.fullName} avatarUrl={me?.data?.avatar} />
+            <Topbar name={me?.data?.fullName}/>
           </div>
 
           <div className="px-4 sm:px-6">
@@ -117,8 +117,6 @@ export default function Dashboard() {
           <div className="hidden lg:block">
             <Topbar
               name={me?.data?.fullName}
-              avatarUrl={me?.data?.avatar}
-              onLogout={logout}
             />
           </div>
 

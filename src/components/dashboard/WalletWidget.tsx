@@ -10,11 +10,11 @@ type Wallet = {
   name: string;
   type: "credit" | "debit" | string;
   cardNumber: string;
-  bank: string; 
+  bank: string;
   network: "Visa" | "Mastercard" | string;
   expiryMonth: number;
   expiryYear: number;
-  color?: string; 
+  color?: string;
   isDefault?: boolean;
 };
 
@@ -38,9 +38,7 @@ const splitBank = (s?: string) => {
   return { brand, bank };
 };
 
-const Chip = ({ dim = 28 }: { dim?: number }) => (
-  <img src={simcardLogo} width={30} height={24}></img>
-);
+const Chip = () => <img src={simcardLogo} width={30} height={24}></img>;
 
 const Contactless = () => <img src={wifiLogo} width={33} height={34}></img>;
 

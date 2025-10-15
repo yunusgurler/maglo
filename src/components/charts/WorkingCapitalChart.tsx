@@ -63,7 +63,7 @@ export const WorkingCapitalChart: React.FC<{
               width={90}
             />
             <Tooltip
-              formatter={(value: any, name: any, props: any) => [
+              formatter={(value: any, name: any) => [
                 fmtCurrency(Number(value), curr),
                 name === "income"
                   ? "Income"

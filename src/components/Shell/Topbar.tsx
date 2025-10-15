@@ -2,13 +2,10 @@ import searchLogo from "../../assets/search.png";
 import notificationsLogo from "../../assets/notifications.png";
 export const Topbar: React.FC<{
   name?: string;
-  avatarUrl?: string;
-}> = ({ name = "Mahfuzul Nabil", avatarUrl}) => {
-  const avatar =
-    avatarUrl ||
-    `https://ui-avatars.com/api/?name=${encodeURIComponent(
-      name
-    )}&background=random&size=64`;
+}> = ({ name = "" }) => {
+  const avatar = `https://ui-avatars.com/api/?name=${encodeURIComponent(
+    name
+  )}&background=random&size=64`;
 
   return (
     <header className="h-16 flex items-center justify-between px-6">

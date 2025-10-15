@@ -19,6 +19,7 @@ export const Card: React.FC<{
   className?: string;
   title?: string;
   action?: React.ReactNode;
+  children?: any
 }> = ({ className = "", title, action, children }) => (
   <div className={`bg-white rounded-2xl shadow-card ${className}`}>
     {(title || action) && (
