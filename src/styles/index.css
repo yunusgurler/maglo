@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Shimmer skeleton */
+.skeleton {
+  @apply relative overflow-hidden bg-slate-200/70 rounded;
+}
+.skeleton::after {
+  content: "";
+  @apply absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/40 to-transparent;
+  animation: shimmer 1.25s infinite;
+}
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  background: #f6f7fb;
+}
+
+/* Pixel helpers for auth layout */
+.auth-card {
+  width: 430px;
+}
+.auth-illustration {
+  width: 430px;
+}
